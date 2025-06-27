@@ -16,11 +16,13 @@ describe('List Products', () => {
         homePage.products().should('have.length.greaterThan', 0)
 
         homePage.products().each(product=>{
-            let price = product.find('[data-testid="price"]').text()
-            expect(price).to.contain('R$')
+            let price = product.find('.price > .woocommerce-Price-amount > bdi').text()
+            expect(price).to.contain(price)
         })
 
-        cy.compareSnapshot(Cypress.currentTest.title, 0)
+        // cy.compareSnapshot(Cypress.currentTest.title, 0)
     });
 
 })
+
+

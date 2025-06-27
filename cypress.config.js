@@ -41,9 +41,9 @@ module.exports = defineConfig({
     reporter: 'cypress-lens'
 
   },
-  // reporter: 'mochawesome',
-  // reporterOptions: {
-  //   reportFilename: "[name]-result",
-  //   html: false
-  // }
+  reporter: 'mochawesome',
+  reporterOptions: {
+    reportFilename: "[name]-result",
+    html: false
+  }
 });
